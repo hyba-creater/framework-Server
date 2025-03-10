@@ -1,0 +1,69 @@
+{% block stylesheets %}
+    <!-- Lien vers Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Styles personnalisés pour la navbar -->
+    <style>
+        .innvbar {
+            /* Styles pour la navbar */
+        }
+        .innvbar .container {
+            /* Styles pour le conteneur de la navbar */
+        }
+        .innvbar .nav {
+            /* Styles pour la liste de navigation */
+        }
+        .innvbar .nav .nav-item {
+            /* Styles pour les éléments de la liste de navigation */
+        }
+        .innvbar .navbar-brand, .innvbar .nav .nav-link {
+            /* Styles communs pour le brand et les liens */
+        }
+        .innvbar .nav .nav-link:hover {
+            /* Styles pour les liens au survol */
+            color: #ff0000; /* Exemple de couleur rouge au survol */
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand (logo ou nom du site) -->
+            <a class="navbar-brand" href="{{ path('app_pages') }}">
+                <i class="bi bi-facebook" style="color: #ff0000;"></i> Tunisia
+            </a>
+
+            <!-- Bouton de bascule pour les écrans mobiles -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Contenu de la navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Lien Accueil -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_pages') }}">Home</a>
+                    </li>
+
+                    <!-- Lien À propos -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_about') }}">About</a>
+                    </li>
+
+                    <!-- Lien Connection -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_connection') }}">Connection</a>
+                    </li>
+
+                    <!-- Lien Inscription -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_inscription') }}">Inscription</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
